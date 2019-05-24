@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Artistlist = (props) =>{
     return (
+        props.artists !=null ? 
         <div className="artist_container">
             { props.artists.map( item => (
                  <Link to={`/artist/${item.id}`} key={item.id} className="artist_item" >
@@ -19,6 +20,8 @@ const Artistlist = (props) =>{
             }
     
         </div>
+        :
+        null
     )
 }
 
